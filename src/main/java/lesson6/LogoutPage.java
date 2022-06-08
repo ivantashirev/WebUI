@@ -1,5 +1,6 @@
 package lesson6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +17,7 @@ public class LogoutPage extends BasePage {
     @FindBy(id = "logout_sidebar_link")
     public WebElement logoutButton;
 
+    @Step("Razlogiruemsa na vsu katushku")
     public void clickLogout() throws InterruptedException{
         webDriverWait.until(ExpectedConditions.elementToBeClickable(burgerButton));
         burgerButton.click();
